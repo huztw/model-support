@@ -72,7 +72,7 @@ class Transformer
         }
 
         if ($this->belongs_to_relation === null || (Str::is($relations, $this->belongs_to_relation) && !Str::is($ignores, $this->belongs_to_relation))) {
-            return $callback($this->model);
+            return $callback($this->model, $this->belongs_to_relation);
         }
 
         return $this->model;
