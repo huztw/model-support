@@ -1,0 +1,41 @@
+{
+    "name": "huztw/model-support",
+    "description": "laravel model support",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "huztw",
+            "email": "c0s0c0z0@gmail.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/huztw/model-support",
+    "keywords": ["Laravel", "ModelSupport"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Huztw\\ModelSupport\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Huztw\\ModelSupport\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huztw\\ModelSupport\\ModelSupportServiceProvider"
+            ],
+            "aliases": {
+                "ModelSupport": "Huztw\\ModelSupport\\Facades\\ModelSupport"
+            }
+        }
+    }
+}
